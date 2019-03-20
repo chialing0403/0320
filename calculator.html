@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calculator</title>
+</head>
+<body>
+  <input type="number"  id="myData1"  >
+  <input type="number"  id="myData2"  >
+  <br>
+  <script>
+  	function add(){
+  		var x,y
+  		x = parseFloat(document.getElementById("myData1").value);
+  		y = parseFloat(document.getElementById("myData2").value);
+  		document.getElementById("result").innerHTML = x+y;
+  	}
+  	function minus(){
+  		var x,y
+  		x = parseFloat(document.getElementById("myData1").value);
+  		y = parseFloat(document.getElementById("myData2").value);
+  		document.getElementById("result").innerHTML = x-y;
+  	}
+  	function multiple(){
+  		var x,y
+  		x = parseFloat(document.getElementById("myData1").value);
+  		y = parseFloat(document.getElementById("myData2").value);
+  		document.getElementById("result").innerHTML = x*y;
+  	}
+  	function devide(){
+  		var x,y
+  		x = parseFloat(document.getElementById("myData1").value);
+  		y = parseFloat(document.getElementById("myData2").value);
+  		document.getElementById("result").innerHTML = x/y;
+  	}
+  	function _clear(){
+  	    parseFloat(document.getElementById("myData1").value = " ");
+  	    parseFloat(document.getElementById("myData2").value = " ");
+  	    document.getElementById("result").value = " ";
+  	}
+  </script>
+  <button onclick="add()"> + </button>
+  <button onclick="minus()"> - </button>
+  <button onclick="multiple()"> * </button>
+  <button onclick="devide()"> / </button>
+  <button onclick="_clear()">C</button>
+  <h5>計算結果</h5>
+  <h2><output id = "result"></output><h2>
+
+</body>
+</html>

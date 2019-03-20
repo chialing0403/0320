@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <title>DrawTest</title>
+	    <canvas id="myCanvas" width="800" height="400" style="border:1px solid#FFDB66;">  </canvas>     
+		
+	    <script >
+			 {
+				var Canvas = document.getElementById("myCanvas");
+				var ctx = myCanvas.getContext("2d");							   
+                var canvasPositionX = 50; 
+                var canvasPositionY = 50;
+
+                var SpeedX = 3;
+                var SpeedY = 3; 
+                ctx.fillStyle="pink";
+             
+			}
+			 setInterval(function(){
+			 	ctx.clearRect(0, 0, 800, 400);
+			 	ctx.fillRect(canvasPositionX, canvasPositionY, 50, 50);
+			 	canvasPositionX += SpeedX; 
+                canvasPositionY += SpeedY;
+                if (canvasPositionX>750 || canvasPositionX<0) {SpeedX = -SpeedX}
+                if (canvasPositionY>350 || canvasPositionY<0) {SpeedY = -SpeedY}	
+			 	},10)
+		</script>
+
+	</head>
+
+	<body>
+		
+	</body>
+</html>
